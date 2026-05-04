@@ -1,0 +1,59 @@
+
+
+No código foram implementadas as struct:
+ingreso - contém as informações do ingresso
+cliente - contém o nome do cliente e o ingresso. 
+fila - fila circular para add os clientes. 
+
+Contem as principais funções de pilha e fila. 
+PILHA :
+inicialização. 
+pilha vazia. 
+pilha cheia. 
+push.
+pop. 
+mostrar pilha de ingressos - utiliza um for que, a partir do topo, imprime 
+todos os ingressos até o primeiro empilhado. 
+
+FILA CIRCULAR :
+inicialização.
+fila vazia.
+fila cheia. 
+enfileira.
+desenfileira.
+Uso do módulo (%) garante que a fila 
+"volte ao início" quando chega no fim → tornando-a circular. 
+
+Criei um catálogo de ingressos, e para adiciona-los 
+a pilha criei uma função que a partir da quantidade de ingressos disponiveis 
+ele da um push depois de passar por um rand, o que faz com que sejam emplilhados 
+de maneira aleatória. 
+
+
+No main apenas inicializei a fila e a pilha e criei um menu de interação com 
+switch para o usuário poder utilizar as funções do programa:
+printf("\n=== SISTEMA CINECAPI ===\n");
+        printf("1. Adicionar cliente (compra ingresso)\n");
+            Cria um novo cliente
+            com o strcpy copia o o nome do cliente para outra string
+            retira um ingresso da pilha com o pop
+            enfileira o cliente e mostra as informações dele e do ingresso
+
+        printf("2. Mostrar os clientes da fila\n");
+            imprime todos os elementos da fila circular 
+            a função começa apontando para o primeiro cliente da fila 
+            percorre toda ela imprimindo os seus dados e do ingresso 
+            
+            idx = (idx + 1) % MAX_SIZE;
+            Isso garante o comportamento circular:
+            Se chegar no fim do vetor (MAX_SIZE), volta para a posição 0.
+
+        printf("3. Liberar cliente da fila\n");
+            apenas utiliza a função desenfileira e mostra os dados do cliente 
+            e do ingresso.
+
+        printf("4. Mostrar ingressos disponiveis\n");
+            chama a função de mostrar a pilha. 
+            onde a mesma aponta para o topo  e partir dele imprime todos os 
+            itens anteriores. 
+
