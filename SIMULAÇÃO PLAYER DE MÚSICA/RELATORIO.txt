@@ -1,0 +1,46 @@
+
+
+Inicialmente, construi as principais structs que o 
+programa vai exigir.
+Struct musica.
+Struct nó musica com ponteiro para ant e prox.
+Struct playlist com ponteiro para inicio e fim.
+Struct fila e pilha. 
+
+Na fila, utilizei a alocação dinamica de memoria (malloc)
+com ponteiros para cada valor que vai ser enfileirado.
+Nas funções da pilha também realizei o mesmo tipo de alocação
+dinamica, e vale ressaltar que nas funções de desempilha e 
+desenfileirar sempre realizo a liberação de memoria com o comando 
+free. 
+
+Ja na lista duplamente encadeada inseri as principais funções 
+de inserir, inserir no meio, remover e imprimir. 
+
+Para as funções de inserir no meio e remover, optei por utilizar o 
+comando (strcmp) para comparar as strings dos nomes das musicas
+ao invés de utilizar um valor número (id) como meio de busca na lista.  
+
+
+Como funções auxiliares declarei as seguintes:
+
+-tocar playlist : Caminha durante toda a lista de musicas da playlist 
+e assim com um  contador define o tamanho/quatidade de musicas. A partir
+disso, inicializa um vetor com esse mesmo tamanho para poder utilzar um rand 
+e assim conseguir reproduzir no modo shuffle. 
+
+Sempre que uma é reproduzida ela é desenfileirada e empilhada para 
+conseguir armezenar as musicas que ja foram tocadas e controlar as proximas 
+que irão ser tocadas. 
+
+-gerenciar playlist :  
+-> Criar Playlist, armazena o nome e aloca dinamicamente na lista DP, uliza 
+A função strcpy() ondce copia dados da um  string para a memória 
+de outra string.
+->Buscar Playlist, é feita tambem a partir da comparação de duas 
+strings.
+
+Por fim, construi um menu interativo, realizando algumas verificações
+entre as opções de escolha para o funcionamento correto do programa. 
+
+
